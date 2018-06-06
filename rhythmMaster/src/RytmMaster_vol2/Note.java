@@ -69,6 +69,7 @@ public class Note extends Thread {
 			{
 				//System.out.println("GAME OVER");
 				DynamicBeat.isGameOver = true;
+				Main.NOTE_SPEED = 0;
 				//System.exit(0);
 			}
 			else 

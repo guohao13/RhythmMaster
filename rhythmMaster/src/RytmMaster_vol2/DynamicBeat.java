@@ -253,6 +253,7 @@ public class DynamicBeat extends JFrame {
 			}
 			@Override
 			public void mousePressed(MouseEvent e) {
+				Main.NOTE_SPEED = 10;
 				Music buttonEnteredMusic = new Music("buttonPressedMusic.mp3", false);
 				buttonEnteredMusic.start();
 				gameStart(nowSelected, "Easy");
@@ -280,6 +281,7 @@ public class DynamicBeat extends JFrame {
 			}
 			@Override
 			public void mousePressed(MouseEvent e) {
+				Main.NOTE_SPEED = 20;
 				Music buttonEnteredMusic = new Music("buttonPressedMusic.mp3", false);
 				buttonEnteredMusic.start();
 				gameStart(nowSelected, "Hard");
@@ -310,6 +312,7 @@ public class DynamicBeat extends JFrame {
 				Music buttonEnteredMusic = new Music("buttonPressedMusic.mp3", false);
 				buttonEnteredMusic.start();
 				DynamicBeat.isGameOver = false;
+				Main.NOTE_SPEED = -100;
 				Game.life = 100;
 				Game.score = 0;
 				backMain();
