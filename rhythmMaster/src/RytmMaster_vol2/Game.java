@@ -56,7 +56,7 @@ public class Game extends Thread {
 			g.setFont(new Font("Elephant", Font.BOLD, 80));
 			g.drawString("GAME OVER", 340, 350);
 		}
-		else {
+		
 			g.drawImage(noteRouteAImage, 228, 30, null);
 			g.drawImage(noteRouteSImage, 332, 30, null);
 			g.drawImage(noteRouteDImage, 436, 30, null);
@@ -117,11 +117,12 @@ public class Game extends Thread {
 				//g.drawImage(blueFlareImage, 320, 370, null);
 				
 			}
+			g.setColor(Color.GREEN);
+			g.setFont(new Font("Elephant", Font.BOLD, 30));
+			g.drawString("Life : "+ Game.life, 800, 700); // 라이프 게이지 출력
 		}
-		g.setColor(Color.GREEN);
-		g.setFont(new Font("Elephant", Font.BOLD, 30));
-		g.drawString("Life : "+ Game.life, 800, 700);// 라이프게이지 출력
-	}
+		
+	
 	/*public void screenGameOver(Graphics2D g) {
 		g.setColor(Color.RED);
 		g.setFont(new Font("Elephant", Font.BOLD, 80));

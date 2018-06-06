@@ -309,6 +309,9 @@ public class DynamicBeat extends JFrame {
 			public void mousePressed(MouseEvent e) {
 				Music buttonEnteredMusic = new Music("buttonPressedMusic.mp3", false);
 				buttonEnteredMusic.start();
+				DynamicBeat.isGameOver = false;
+				Game.life = 100;
+				Game.score = 0;
 				backMain();
 			}
 		});
@@ -419,12 +422,9 @@ public class DynamicBeat extends JFrame {
 		selectTrack(nowSelected);
 		isGameScreen = false;
 		game.close();
+		DynamicBeat.isGameOver = false; // 다시 초기화
 	}
 	
-	
-	public void gameOver() {
-		
-	}
 
 	public void enterMain() {
 		startButton.setVisible(false);
